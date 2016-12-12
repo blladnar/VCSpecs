@@ -1,36 +1,26 @@
-//
-//  VCSpecsTests.swift
-//  VCSpecsTests
-//
-//  Created by Randall Brown on 12/11/16.
-//  Copyright © 2016 Randall Brown. All rights reserved.
-//
-
 import XCTest
 @testable import VCSpecs
 
-class VCSpecsTests: XCTestCase {
-    
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+class VCSpecsTests: VCSpec {
+    override func spec() {
+        let subject = UIViewController()
+        
+        testViewController(subject) {
+            viewAppears {
+                vc("should load") {
+                    XCTAssert(true)
+                }
+                
+                vc("should have something on the screen") {
+                    XCTAssert(true)
+                }
+            }
+            
+            viewDisappears {
+                vc("should unload") {
+                    XCTAssert(true)
+                }
+            }
         }
     }
-    
 }

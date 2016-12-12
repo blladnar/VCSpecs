@@ -10,6 +10,10 @@
 		7015444A1DFE8151003A7181 /* VCSpecs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 701544401DFE8151003A7181 /* VCSpecs.framework */; };
 		7015444F1DFE8151003A7181 /* VCSpecsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7015444E1DFE8151003A7181 /* VCSpecsTests.swift */; };
 		701544511DFE8151003A7181 /* VCSpecs.h in Headers */ = {isa = PBXBuildFile; fileRef = 701544431DFE8151003A7181 /* VCSpecs.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		701544691DFE856D003A7181 /* VCSpecDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701544651DFE856D003A7181 /* VCSpecDSL.swift */; };
+		7015446A1DFE856D003A7181 /* VCSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = 701544661DFE856D003A7181 /* VCSpec.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7015446B1DFE856D003A7181 /* VCSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 701544671DFE856D003A7181 /* VCSpec.m */; };
+		7015446C1DFE856D003A7181 /* VCTestHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701544681DFE856D003A7181 /* VCTestHolder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +33,11 @@
 		701544491DFE8151003A7181 /* VCSpecsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VCSpecsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7015444E1DFE8151003A7181 /* VCSpecsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCSpecsTests.swift; sourceTree = "<group>"; };
 		701544501DFE8151003A7181 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		701544621DFE84DF003A7181 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		701544651DFE856D003A7181 /* VCSpecDSL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCSpecDSL.swift; sourceTree = "<group>"; };
+		701544661DFE856D003A7181 /* VCSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCSpec.h; sourceTree = "<group>"; };
+		701544671DFE856D003A7181 /* VCSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCSpec.m; sourceTree = "<group>"; };
+		701544681DFE856D003A7181 /* VCTestHolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCTestHolder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +65,7 @@
 				701544421DFE8151003A7181 /* VCSpecs */,
 				7015444D1DFE8151003A7181 /* VCSpecsTests */,
 				701544411DFE8151003A7181 /* Products */,
+				701544611DFE84DF003A7181 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +81,10 @@
 		701544421DFE8151003A7181 /* VCSpecs */ = {
 			isa = PBXGroup;
 			children = (
+				701544651DFE856D003A7181 /* VCSpecDSL.swift */,
+				701544661DFE856D003A7181 /* VCSpec.h */,
+				701544671DFE856D003A7181 /* VCSpec.m */,
+				701544681DFE856D003A7181 /* VCTestHolder.swift */,
 				701544431DFE8151003A7181 /* VCSpecs.h */,
 				701544441DFE8151003A7181 /* Info.plist */,
 			);
@@ -86,6 +100,14 @@
 			path = VCSpecsTests;
 			sourceTree = "<group>";
 		};
+		701544611DFE84DF003A7181 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				701544621DFE84DF003A7181 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -93,6 +115,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7015446A1DFE856D003A7181 /* VCSpec.h in Headers */,
 				701544511DFE8151003A7181 /* VCSpecs.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,6 +171,7 @@
 				TargetAttributes = {
 					7015443F1DFE8151003A7181 = {
 						CreatedOnToolsVersion = 8.1;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 					701544481DFE8151003A7181 = {
@@ -196,6 +220,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7015446C1DFE856D003A7181 /* VCTestHolder.swift in Sources */,
+				701544691DFE856D003A7181 /* VCSpecDSL.swift in Sources */,
+				7015446B1DFE856D003A7181 /* VCSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +249,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -245,6 +273,10 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -275,6 +307,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -298,6 +331,10 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -320,6 +357,8 @@
 		701544551DFE8151003A7181 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -331,6 +370,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Randall.VCSpecs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -338,6 +379,8 @@
 		701544561DFE8151003A7181 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -349,6 +392,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Randall.VCSpecs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -356,6 +400,7 @@
 		701544581DFE8151003A7181 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = VCSpecsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Randall.VCSpecsTests;
@@ -367,6 +412,7 @@
 		701544591DFE8151003A7181 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = VCSpecsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Randall.VCSpecsTests;
