@@ -32,6 +32,9 @@ static VCSpec *currentTest = nil;
     IMP implementation = imp_implementationWithBlock(^(VCSpec *testCase){
         currentTest = testCase;
         [UIApplication sharedApplication].delegate.window.rootViewController = [VCTestHolder shared].currentViewController;
+        XCTestExpectation *expectation = [testCase expectationWithDescription:@"Show View Expectation"];
+        [expectation performSelector:@selector(fulfill) withObject:nil afterDelay:0.0];
+        [testCase waitForExpectationsWithTimeout:1.0 handler:nil];
         
         [test run];
     });
