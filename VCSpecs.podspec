@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "VCSpecs"
-  s.version      = "1.0.0"
+  s.version      = "1.0.2"
   s.summary      = "A swift View Controller testing framework"
 
   s.description  = <<-DESC
