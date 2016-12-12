@@ -14,6 +14,7 @@
 		7015446A1DFE856D003A7181 /* VCSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = 701544661DFE856D003A7181 /* VCSpec.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7015446B1DFE856D003A7181 /* VCSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 701544671DFE856D003A7181 /* VCSpec.m */; };
 		7015446C1DFE856D003A7181 /* VCTestHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701544681DFE856D003A7181 /* VCTestHolder.swift */; };
+		7015446E1DFE8BBE003A7181 /* SwiftInterfaces.h in Headers */ = {isa = PBXBuildFile; fileRef = 7015446D1DFE8B4F003A7181 /* SwiftInterfaces.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		701544661DFE856D003A7181 /* VCSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCSpec.h; sourceTree = "<group>"; };
 		701544671DFE856D003A7181 /* VCSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCSpec.m; sourceTree = "<group>"; };
 		701544681DFE856D003A7181 /* VCTestHolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCTestHolder.swift; sourceTree = "<group>"; };
+		7015446D1DFE8B4F003A7181 /* SwiftInterfaces.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftInterfaces.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				701544681DFE856D003A7181 /* VCTestHolder.swift */,
 				701544431DFE8151003A7181 /* VCSpecs.h */,
 				701544441DFE8151003A7181 /* Info.plist */,
+				7015446D1DFE8B4F003A7181 /* SwiftInterfaces.h */,
 			);
 			path = VCSpecs;
 			sourceTree = "<group>";
@@ -117,6 +120,7 @@
 			files = (
 				7015446A1DFE856D003A7181 /* VCSpec.h in Headers */,
 				701544511DFE8151003A7181 /* VCSpecs.h in Headers */,
+				7015446E1DFE8BBE003A7181 /* SwiftInterfaces.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

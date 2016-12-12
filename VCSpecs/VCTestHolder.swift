@@ -1,19 +1,19 @@
 import Foundation
 
-@objc public class VCTestHolder: NSObject {
-    public static let shared = VCTestHolder()
+final internal class VCTestHolder: NSObject {
+    static let shared = VCTestHolder()
     private var appearTestsForClass = [String: [VCTest]]()
     private var disappearTestsForClass = [String: [VCTest]]()
     private var appear: Bool? = nil
     
-    public var currentViewController: UIViewController?
-    public var currentClass = ""
+    var currentViewController: UIViewController?
+    var currentClass = ""
     
-    public var appearanceTests: [VCTest]? {
+    var appearanceTests: [VCTest]? {
         return appearTestsForClass[currentClass]
     }
     
-    public var disappearanceTests: [VCTest]? {
+    var disappearanceTests: [VCTest]? {
         return disappearTestsForClass[currentClass]
     }
     

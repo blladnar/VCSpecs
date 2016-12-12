@@ -7,7 +7,8 @@
 //
 
 #import "VCSpec.h"
-#import <VCSpecs/VCSpecs-Swift.h>
+#import "SwiftInterfaces.h"
+#import <objc/runtime.h>
 
 static VCSpec *currentTest = nil;
 
